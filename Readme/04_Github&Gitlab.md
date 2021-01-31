@@ -1,8 +1,8 @@
 
 
-# Gitlab
+# Github & lab
 
-## 1. What is the Gitlab
+## 1. What is the Github & lab
 
 - Git '분산형 버젼관리' + '원격 저장소'
 - 프로젝트를 만들때마다 생기는 clone https:주소가 원격 저장소 역할을 해줌
@@ -10,7 +10,7 @@
 - Github에 비해 보안 및 개별 프로젝트 진행하기에 용이함
 
 ## 2. 용어 정리
-- server => gitlab / local computer => 내 노트북
+- server => github & lab / local computer => 내 노트북
 
 ## 3. local에서 git에 업로드할때(push)
 1. 자기소개(내 이메일과 내 이름 등록) -> 내가 올렸다는 걸 모두가 알기 위해서 
@@ -55,7 +55,7 @@ git push -u origin master (stage위에서 사진찍기)
 
 
 
-## 4. gitlab에서 local로 데이터 다운받기
+## 4. git에서 local로 데이터 다운받기
 1. Git의 주소 입력
 ```
 git clone https://gitlab주소 
@@ -76,3 +76,60 @@ git pull
 # local computer에 데이터는 이미 있고 원격저장소에 기록 남기기
 ```
 
+## 5. Github로 협업하기
+
+### 5.1 협업 procedure
+
+1. main 생성 후 branch 생성
+```
+# branch 생성
+git branch __branch_name__
+# branch인지 확인
+git branch
+```
+2. main 에서 branch로 전환
+
+```
+git switch __branch_name__
+```
+
+extra 2. 1번, 2번 동시 수행
+```
+git switch -c __branch_name__
+```
+
+3. branch에서 add . & commit
+```
+git add .
+git commit -m 'branch'
+```
+
+4. branch 에서 main 으로 전환
+```
+# branch 삭제 및 전환
+git switch master
+# 전환됬는지 확인
+git log(head -> '현재 위치')
+```
+5. 병합
+```
+git merge __branch_name__
+```
+
+6. 기록 및 상황 보기
+```
+# 관리되고 있는 파일과 변경 사항 확인
+git status
+```
+
+### 5.2 병합 종류
+
+1. 꽃길만 걷자. FastForward
+	
+	- 새로운 걸 만드는게 아니라 branch 그대로 
+	
+2. 일반적인 Merge
+3. 2번에서 merge 실패했을 때
+
+	- automatic merge failed (master|merging)
+	- 수정하고 다시 merge 시도
