@@ -1,0 +1,11 @@
+/* 01_nav_footer.css */
+/* 아래에 코드를 작성해 주세요. */
+body {
+  height: 3000px;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+nav img {
+  height: 80px;
+}
