@@ -79,6 +79,9 @@ git pull
 ## 5. Github로 협업하기
 
 ### 5.1 협업 procedure
+0. 매우 불행하게도 동시에 push 했을 때
+	0.1. 조금 늦게 push한 사람은 error 발생, git pull, 내용 수정 후 git push origin main
+	0.2. 이래서 branch가 협업할 때 중요하다
 
 1. main 생성 후 branch 생성
 ```
@@ -121,7 +124,6 @@ git merge __branch_name__
 # 관리되고 있는 파일과 변경 사항 확인
 git status
 ```
-
 ### 5.2 병합 종류
 
 1. 꽃길만 걷자. FastForward
@@ -133,3 +135,16 @@ git status
 
 	- automatic merge failed (master|merging)
 	- 수정하고 다시 merge 시도
+
+## 6. 깃허브와 서버
+- 개요
+  - 우리가 항상 컴퓨터를 켜놓고 정보를 줄 수 없기에 정보를 주기만 하는 역할의 서버가 필요함
+  - GitHub Portfolio 페이지 또한 동일한 원리
+- 깃허브 서버 관련된 사전 지식
+  - ssh: 깃허브 서버가서 직접 수정하는 것 
+- 서버에 접속해서 작업하려면? VIM 이 필요해
+	- 서버에는 운영체제가 없으므로 vim이라는 유닉스로 파일 관리
+- VIM 사용법
+	- 작업하고 싶은 파일에서 git bash 로 vim으로 파일 열고 수정
+    - vim Filename.html-> i(insert mode) -> 수정 -> esc탈출 -> 종료  ':q' / 저장: '':w" :wq 저장후 종료
+	- git add 후에 git commit 하면 vim 들어가짐 commit msg 입력후 종료
