@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}New page{% endblock title %}
+
+{% block body %}
+<h1>New</h1>
+<form action="{% url 'create' %}" method="POST">
+  {% csrf_token %}
+  <div>
+    title: <input type="text" name="title">
+  </div>
+  overview: <textarea name="overview" cols="30" rows="5"></textarea>
+  <div>
+    poster_path: <input type="text" name="poster_path">
+  </div>
+  <div>
+    <input type="submit" class="btn btn-primary">
+  </div>
+</form>
+{% endblock body %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Form</h1>
+
+{% if request.resolver_match.url_name == 'create' %}
+  <h2>create</h2>
+{% else %}
+  <h2>update</h2>
+{% endif %}
+
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" class="btn btn-primary">
+</form>
+
+
+{% endblock content %}

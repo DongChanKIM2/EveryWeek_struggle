@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Detail{% endblock title %}
+
+{% block body %}
+  <h1>This is Detail page</h1>
+  <h2>{{ movie.title }}
+  <h3>{{ movie.overview }}</h3>
+  <h3>{{ movie.posert_path }}</h3>
+  <a href="{% url 'index' %}" class="btn btn-primary">Index</a>
+ {% endblock body %}
