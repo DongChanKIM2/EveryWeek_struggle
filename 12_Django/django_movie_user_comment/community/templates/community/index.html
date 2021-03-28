@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>INDEX</h1>
+  {% for review in reviews %}
+    <a href="{% url 'community:review_detail' review.pk %}" class="btn btn-primary">
+      {{ review.title }}
+    </a>
+  {% endfor %}
+
+
+{% endblock content %}
